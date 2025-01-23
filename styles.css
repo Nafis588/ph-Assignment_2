@@ -33,9 +33,6 @@ button{
     margin: 0;
 }
 
-.brand-title{
-    
-}
 .brand-title img{
     width: 62px;
     height: 62px;
@@ -46,6 +43,7 @@ button{
     font-weight: bold;
     text-align: center;
 }
+
 .navbar-links{
     list-style: none;
     margin: 0;
@@ -75,7 +73,9 @@ button{
     color: #5D58EF;
 }
 
-
+.hamburger-menu{
+    display: none;
+}
 
 
 
@@ -128,6 +128,7 @@ button{
     font-weight: bold;
     text-align: center;
     align-items: center;
+    margin-bottom: 80px;
 }
 .curriculum-container {
     display: grid;
@@ -216,20 +217,18 @@ button{
     background-position: center;
     margin: 0 275px;
     padding: 0 100px;
+    text-align: center;
 
 }
 .story-container{
     border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
+    gap: 5px;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(250px, auto);
-    gap: 2rem;
     flex-wrap: wrap;
-    height: 70%;
+    padding-bottom: 100px;
+
 }
 .story-card:first-child {
     grid-column: span 2;
@@ -242,21 +241,163 @@ button{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 5px;
+}
+.card-image{
+    height: 50%;
 }
 .story-card h2 {
     font-size: 16px;
     text-align: center;
     padding: 40px;
-  }
-.stories button{
-    background-color: black;
+}
+.story-date {
+    position: absolute;
+    bottom: 40%;
+    left: 15%;
+    background-color: #95B226;
+    color: white;
+    padding:10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
 
 footer{
     background-color:#01ACFD;
     color: white;
-    padding: 275px;
+    padding: 100px;
     margin: 0 275px;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+.footer-main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 0;
+}
+.footer-main img{
+    width: 62px;
+    height: 62px;
+}
+.footer-main h1{
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    font-weight: bold;
+    text-align: start;
+    margin: 0;
+}
+.footer-main > :last-child {
+    grid-column: 1 / -1;
+    text-align: start;
+    font-size: 20px;
+    font-weight: normal;
+}
+.links h1 {
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .navbar-links, .navbar button, .brand-title h1 {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        color: black;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .hero{
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 3rem 0;
+    }
+    .t1, .t2, .t3{
+        font-size: 32px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+    }
+    .hero-cta p{
+        color: black;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 20px 0;
+    }
+    .hero-image{
+        margin: 0 100px;
+    }
+    .curriculum-container{
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px;
+    }
+    .expand{
+        display: none;
+    }
+    .stories{
+        margin: 0px;
+        padding-bottom: 20px;
+    }
+    .story-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0px;
+    }
+    .story-card:first-child {
+        display: none;
+      }
+    .story-date {
+        bottom: 37%;
+        left: 10%;
+        background-color: #95B226;
+        color: white;
+        padding:5px 10px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    .story-card h2 {
+        font-size: 10px;
+        text-align: start;
+        padding: 40px;
+        font-weight: normal;
+      }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0px;
+    }
+
+
+
+
+
+
+
 }
